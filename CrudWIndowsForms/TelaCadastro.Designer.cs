@@ -46,7 +46,7 @@ namespace CrudWIndowsForms
             this.label7 = new System.Windows.Forms.Label();
             this.textTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textID = new System.Windows.Forms.TextBox();
+            this.textId = new System.Windows.Forms.TextBox();
             this.textNome = new System.Windows.Forms.TextBox();
             this.textEndereco = new System.Windows.Forms.TextBox();
             this.textCEP = new System.Windows.Forms.MaskedTextBox();
@@ -215,13 +215,14 @@ namespace CrudWIndowsForms
             this.label8.TabIndex = 15;
             this.label8.Text = "Telefone";
             // 
-            // textID
+            // textId
             // 
-            this.textID.Location = new System.Drawing.Point(12, 92);
-            this.textID.Name = "textID";
-            this.textID.Size = new System.Drawing.Size(65, 20);
-            this.textID.TabIndex = 16;
-            this.textID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textId.Location = new System.Drawing.Point(12, 92);
+            this.textId.Name = "textId";
+            this.textId.ReadOnly = true;
+            this.textId.Size = new System.Drawing.Size(65, 20);
+            this.textId.TabIndex = 16;
+            this.textId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textNome
             // 
@@ -229,6 +230,7 @@ namespace CrudWIndowsForms
             this.textNome.Name = "textNome";
             this.textNome.Size = new System.Drawing.Size(329, 20);
             this.textNome.TabIndex = 17;
+            this.textNome.TextChanged += new System.EventHandler(this.textNome_TextChanged);
             // 
             // textEndereco
             // 
@@ -278,7 +280,7 @@ namespace CrudWIndowsForms
             this.Controls.Add(this.textCEP);
             this.Controls.Add(this.textEndereco);
             this.Controls.Add(this.textNome);
-            this.Controls.Add(this.textID);
+            this.Controls.Add(this.textId);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textTelefone);
             this.Controls.Add(this.label7);
@@ -321,7 +323,7 @@ namespace CrudWIndowsForms
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MaskedTextBox textTelefone;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.TextBox textId;
         private System.Windows.Forms.TextBox textNome;
         private System.Windows.Forms.TextBox textEndereco;
         private System.Windows.Forms.MaskedTextBox textCEP;

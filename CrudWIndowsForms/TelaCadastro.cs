@@ -75,7 +75,7 @@ namespace CrudWIndowsForms
             Salvar.Enabled = false;
             Cancelar.Enabled = false;
             Excluir.Enabled = false;
-            textID.Enabled = true;
+            textId.Enabled = true;
             Pesquisar.Enabled = true;
             textNome.Enabled = false;
             textEndereco.Enabled = false;
@@ -93,7 +93,7 @@ namespace CrudWIndowsForms
             Salvar.Enabled = true;
             Cancelar.Enabled = true;
             Excluir.Enabled = false;
-            textID.Enabled = false;
+            textId.Enabled = false;
             Pesquisar.Enabled = false;
             textNome.Enabled = true;
             textEndereco.Enabled = true;
@@ -133,7 +133,7 @@ namespace CrudWIndowsForms
             }
             else
             {
-                string sql = "UPDATE CLIENTE SET NOME='" + textNome.Text + "', ENDERECO = '" + textEndereco.Text + "' " + "CEP='" + textCEP.Text + "', BAIRRO='" + textBairro.Text + "',CIDADE = '" + textCidade.Text + "', " + "UF='" + textUF.Text + "', TELEFONE='" + textTelefone.Text + "' WHERE ID=" + textID.Text;
+                string sql = "UPDATE CLIENTE SET NOME='" + textNome.Text + "', ENDERECO = '" + textEndereco.Text + "' " + "CEP='" + textCEP.Text + "', BAIRRO='" + textBairro.Text + "',CIDADE = '" + textCidade.Text + "', " + "UF='" + textUF.Text + "', TELEFONE='" + textTelefone.Text + "' WHERE ID=" + textId.Text;
 
                 SqlConnection con = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand(sql, con);
@@ -168,7 +168,7 @@ namespace CrudWIndowsForms
             textCidade.Enabled = false;
             textUF.Enabled = false;
             textTelefone.Enabled = false;
-            textID.Text = "";
+            textId.Text = "";
             textNome.Text = "";
             textEndereco.Text = "";
             textCEP.Text = "";
@@ -180,7 +180,7 @@ namespace CrudWIndowsForms
 
         private void Excluir_Click(object sender, EventArgs e)
         {
-            string sql = "DELETE FROM CLIENTE WHERE ID=" + textID.Text;
+            string sql = "DELETE FROM CLIENTE WHERE ID=" + textId.Text; 
 
             SqlConnection con = new SqlConnection(connectionString);
             SqlCommand cmd = new SqlCommand(sql, con);
@@ -206,7 +206,7 @@ namespace CrudWIndowsForms
             Salvar.Enabled = false;
             Cancelar.Enabled = false;
             Excluir.Enabled = false;
-            txtID.Enabled = true;
+            textId.Enabled = true;
             Pesquisar.Enabled = true;
             textNome.Enabled = false;
             textEndereco.Enabled = false;
@@ -236,7 +236,7 @@ namespace CrudWIndowsForms
             Salvar.Enabled = false;
             Cancelar.Enabled = false;
             Excluir.Enabled = false;
-            txtID.Enabled = true;
+            textId.Enabled = true;
             Pesquisar.Enabled = true;
             textNome.Enabled = false;
             textEndereco.Enabled = false;
@@ -276,7 +276,7 @@ namespace CrudWIndowsForms
                     Salvar.Enabled = true;
                     Cancelar.Enabled = true;
                     Excluir.Enabled = true;
-                    txtID.Enabled = false;
+                    textId.Enabled = false;
                     Pesquisar.Enabled = false;
                     textNome.Enabled = true;
                     textEndereco.Enabled = true;
@@ -286,7 +286,7 @@ namespace CrudWIndowsForms
                     textUF.Enabled = true;
                     textTelefone.Enabled = true;
                     textNome.Focus();
-                    txtID.Text = reader[0].ToString();
+                    textId.Text = reader[0].ToString();
                     textNome.Text = reader[1].ToString();
                     textEndereco.Text = reader[2].ToString();
                     textCEP.Text = reader[3].ToString();
@@ -314,6 +314,11 @@ namespace CrudWIndowsForms
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textNome_TextChanged(object sender, EventArgs e)
         {
 
         }
