@@ -10,6 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sqls", "sqls", "{4AF214B8-C
 		Cliente.sql = Cliente.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{95D9F335-CD18-4AB6-8E35-53FCE35D0077}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\loginimagem.jpg = ..\..\..\..\loginimagem.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
